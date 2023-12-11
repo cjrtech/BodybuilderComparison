@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bodybuilder Comparison</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bodybuilder Comparison</h1>
+    <h1>INDEX</h1>
+    <select id="bodybuilderSelect">
+        <option value="home">Home</option>
+        <option value="frontlatspread">Front Lat Spread</option>
+        <option value="frontdoublebiceps">Front Double Biceps</option>
+        <option value="sidechest">Side Chest</option>
+        <option value="rearlatspread">Rear Lat Spread</option>
+        <option value="reardoublebiceps">Rear Double Biceps</option>
+        <option value="sidetriceps">Side Triceps</option>
+        <option value="abdominalandthigh">Abdominal and Thigh</option>
+        <option value="mostmuscular">Most Muscular</option>
+      </select>
+  </header>
+  <main>
+    <table>
+        <caption>Bodybuilder Victories</caption>
+        <thead>
+          <tr>
+            <th>Bodybuilder</th>
+            <th>Years of Victory</th>
+            <th>Number of Wins</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Larry Scott</td>
+            <td>1965, 1966</td>
+            <td>2</td>
+        </tr>  
+        <tr>
+            <td>Sergio Oliva</td>
+            <td>1967-1969</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Arnold Schwarzenegger</td>
+            <td>1970-1975</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Franco Columbu</td>
+            <td>1976</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Frank Zane</td>
+            <td>1977-1979</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Arnold Schwarzenegger</td>
+            <td>1980</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Franco Columbu</td>
+            <td>1981</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Chris Dickerson</td>
+            <td>1982</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Samir Bannout</td>
+            <td>1983</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Lee Haney</td>
+            <td>1984-1991</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Dorian Yates</td>
+            <td>1992-1997</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Ronnie Coleman</td>
+            <td>1998-2005</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Jay Cutler</td>
+            <td>2006-2007</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Dexter Jackson</td>
+            <td>2008</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Jay Cutler</td>
+            <td>2009-2010</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Phil Heath</td>
+            <td>2011-2017</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Shawn Rhoden</td>
+            <td>2018</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Brandon Curry</td>
+            <td>2019</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Mamdouh Elssbiay</td>
+            <td>2020-2021</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Hadi Choopan</td>
+            <td>2022</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Derek Lunsford</td>
+            <td>2023</td>
+            <td>1</td>
+        </tr>
+          
+        </tbody>
+      </table>
+  </main>
+  <script src="js\script.js"></script>
+  <script>
+    // Script to set the selected option in the dropdown menu after page load
+    document.addEventListener("DOMContentLoaded", function() {
+      const bodybuilderSelect = document.getElementById("bodybuilderSelect");
+      const currentURL = window.location.href;
+      const option = currentURL.substring(currentURL.lastIndexOf('/') + 1).split('.')[0];
+      if (option && bodybuilderSelect) {
+        bodybuilderSelect.value = option;
+      }
+    });
+  </script>
+  <footer>
+    <p>&copy; 2023 Bodybuilder Comparison. All rights reserved. Cedric Rivera</p>
+  </footer>
+</body>
+</html>

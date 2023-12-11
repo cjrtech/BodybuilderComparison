@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bodybuilder Comparison</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bodybuilder Comparison</h1>
+    <h1>FRONT DOUBLE BICEPS</h1>
+    <select id="bodybuilderSelect">
+      <option value="home">Home</option>
+      <option value="frontlatspread">Front Lat Spread</option>
+      <option value="frontdoublebiceps">Front Double Biceps</option>
+      <option value="sidechest">Side Chest</option>
+      <option value="rearlatspread">Rear Lat Spread</option>
+      <option value="reardoublebiceps">Rear Double Biceps</option>
+      <option value="sidetriceps">Side Triceps</option>
+      <option value="abdominalandthigh">Abdominal and Thigh</option>
+      <option value="mostmuscular">Most Muscular</option>
+    </select>
+  </header>
+  <main>
+    <section class="image-grid">
+      <div class="row">
+        <div class="column">
+          <img src="img\frontdoublebicep\scott.jpg" alt="Bodybuilder 1">
+          <p>Scott</p>
+        </div>
+        <div class="column">
+          <img src="img\frontdoublebicep\oliva.jpg" alt="Bodybuilder 2">
+          <p>Oliva</p>
+        </div>
+        <div class="column">
+            <img src="img\frontdoublebicep\arnold.jpg" alt="Bodybuilder 3">
+            <p>Schwarzenegger</p>
+        </div>
+        <div class="column">
+            <img src="img\frontdoublebicep\columbu.jpg" alt="Bodybuilder 4">
+            <p>Columbu</p>
+        </div>
+        <div class="column">
+            <img src="img\frontdoublebicep\zane.jpg" alt="Bodybuilder 5">
+            <p>Zane</p>
+        </div>
+        <div class="column">
+            <img src="img\frontdoublebicep\dickerson.jpg" alt="Bodybuilder 6">
+            <p>Dickerson</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img src="img\frontdoublebicep\bannout.jpg" alt="Bodybuilder 7">
+          <p>Bannout</p>
+      </div>
+      <div class="column">
+        <img src="img\frontdoublebicep\haney.jpg" alt="Bodybuilder 8">
+        <p>Haney</p>
+      </div>
+      <div class="column">
+        <img src="img\frontdoublebicep\yates.jpg" alt="Bodybuilder 9">
+        <p>Yates</p>
+      </div>
+      <div class="column">
+        <img src="img\frontdoublebicep\coleman.jpg" alt="Bodybuilder 10">
+        <p>Coleman</p>
+      </div>
+      <div class="column">
+        <img src="img\frontdoublebicep\cutler.jpg" alt="Bodybuilder 11">
+        <p>Cutler</p>
+      </div>
+      <div class="column">
+        <img src="img\frontdoublebicep\jackson.jpg" alt="Bodybuilder 12">
+        <p>Jackson</p>
+      </div>
+      </div>
+      
+      <div class="row">
+        <div class="column">
+          <img src="img\frontdoublebicep\heath.jpg" alt="Bodybuilder 13">
+          <p>Heath</p>
+        </div>
+        <div class="column">
+          <img src="img\frontdoublebicep\rhoden.jpg" alt="Bodybuilder 14">
+          <p>Rhoden</p>
+        </div>
+        <div class="column">
+          <img src="img\frontdoublebicep\curry.jpg" alt="Bodybuilder 15">
+          <p>Curry</p>
+        </div>
+        <div class="column">
+          <img src="img\frontdoublebicep\elssbiay.jpg" alt="Bodybuilder 16">
+          <p>Elssbiay</p>
+        </div>
+        <div class="column">
+          <img src="img\frontdoublebicep\choopan.jpg" alt="Bodybuilder 17">
+          <p>Choopan</p>
+        </div>
+        <div class="column">
+          <img src="img\frontdoublebicep\lunsford.jpg" alt="Bodybuilder 18">
+          <p>Lunsford</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+  <script>
+    // Script to set the selected option in the dropdown menu after page load
+    document.addEventListener("DOMContentLoaded", function() {
+      const bodybuilderSelect = document.getElementById("bodybuilderSelect");
+      const currentURL = window.location.href;
+      const option = currentURL.substring(currentURL.lastIndexOf('/') + 1).split('.')[0];
+      if (option && bodybuilderSelect) {
+        bodybuilderSelect.value = option;
+      }
+    });
+  </script>
+  <footer>
+    <p>&copy; 2023 Bodybuilder Comparison. All rights reserved. Cedric Rivera</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,figure,figcaption,blockquote,dl, dd {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set body to take full viewport height */
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-grow: 1; /* Allow main content to grow */
+}
+
+.comparison-table {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd; /* Lighter border color */
+  padding: 12px; /* Increase cell padding */
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.image-grid {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* More balanced spacing between columns */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  width: 100%;
+  justify-content: center; /* Centers the columns within the row */
+}
+
+.column {
+  flex: 0 0 calc(100% / 9 - 5px); /* 9 columns in a row with margin between columns */
+  max-width: calc(100% / 9 - 5px);
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 5px; /* Margin between columns */
+  position: relative;
+}
+
+.column p {
+  position: absolute;
+  bottom: -20px; /* Adjust this value to position the text as needed */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 500; /* Light 300 font-weight */
+  font-style: italic; /* Italic font style */
+}
+
+img {
+  float: left;
+  width:  200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+select#bodybuilderSelect {
+  padding: 12px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 500; /* Light 300 font-weight */
+
+  border: none;
+  border-radius: 8px;
+  appearance: none;
+  background-color: #f8f8f8;
+  color: #333;
+  width: 200px;
+  outline: none; /* Remove default focus outline */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+select#bodybuilderSelect {
+  -webkit-appearance: none; /* Hides the default arrow in webkit browsers */
+  -moz-appearance: none; /* Hides the default arrow in Firefox */
+  appearance: none; /* Hides the default arrow in other modern browsers */
+  padding: 10px; /* Adjust padding as needed */
+  background-image: url('../img/arrow.jpg'); /* Replace with your arrow image path */
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center; /* Adjust position as needed */
+  background-size: 35px auto;
+}
+
+/* Hover effect */
+select:hover#bodybuilderSelect {
+  background-color: #e0e0e0;
+}
+
+/* Focus effect */
+select:focus#bodybuilderSelect {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for the arrow */
+select:hover::after#bodybuilderSelect {
+  color: #333;
+}
+
+/* Focus effect for the arrow */
+select:focus::after#bodybuilderSelect {
+  color: #333;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  flex-shrink: 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Styling the paragraph inside the footer */
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
